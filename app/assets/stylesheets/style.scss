@@ -41,7 +41,8 @@ body,html {
   height: 100%;
   background-image: url("https://www.crazy-tutorial.com/ja/wp-content/uploads/2018/11/Hollywood-Red-Carpet-Vectors.jpg");
   background-repeat: no-repeat;
-  background-size: 1500px;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 body {
@@ -118,6 +119,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 1.8em;
   }
 }
+
 
 
 header.header {
@@ -362,8 +364,29 @@ form {
   box-sizing: border-box;
 }
 .comments {
+  position: relative;
   padding: 5px;
   margin-top: 15px;
+  h4 {
+    display: inline-block;
+  }
+  .like-btn {
+    padding-bottom: 200px;
+    color: pink;
+    padding-left: 20px;
+    padding-bottom: 300px;
+   }
+
+  .like-btn-unlike {
+    color: blue;
+  }
+  
+  
+  .posts-show-item .fa {
+    font-size: 16px;
+    margin-right: 3px;
+  }
+
   a {
     color: $accent;
     &:hover {
