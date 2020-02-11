@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :show]
   before_action :move_to_index, except: [:index, :show, :search]
+  impressionist :actions=> [:show]
 
   def index
     @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(5)
@@ -12,7 +13,7 @@ class TweetsController < ApplicationController
 
   def create
     Tweet.create(tweet_params)
-    @like.save
+    
   end
 
   def destroy
@@ -31,6 +32,9 @@ class TweetsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @tweet.comments.includes(:user)
+    @likes_count = Like.where(tweet_id: @tweet.id).count 
+    @tweet = Tweet.find(params[:id])
+    
   end
 
   def search
