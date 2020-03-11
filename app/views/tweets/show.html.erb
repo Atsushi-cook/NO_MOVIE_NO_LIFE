@@ -32,6 +32,7 @@
 
   <div class="comments">
        <h4>＜コメント一覧 ＞
+       <%= render 'relationships/follow_button', user: @user %>
         <% if Like.find_by(user_id: current_user.id, tweet_id: @tweet.id) %>
         <%= link_to("/likes/#{@tweet.id}/destroy", {method: "destroy"}) do %>
           <span class="fa fa-heart like-btn-unlike"></span>
