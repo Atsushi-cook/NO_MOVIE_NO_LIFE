@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: NO_MOVIE_NO_LIFE_production
-  username: NO_MOVIE_NO_LIFE
-  password: <%= ENV['NO_MOVIE_NO_LIFE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
