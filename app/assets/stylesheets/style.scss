@@ -1,5 +1,5 @@
 @import "compass";
-
+@import "font-awesome";
 /*
  * "ほのか明朝" licensed under the IPA Font License Agreement v1.0
  * http://fontfree.me/966（配布元のURL）
@@ -41,7 +41,8 @@ body,html {
   height: 100%;
   background-image: url("https://www.crazy-tutorial.com/ja/wp-content/uploads/2018/11/Hollywood-Red-Carpet-Vectors.jpg");
   background-repeat: no-repeat;
-  background-size: 1500px;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 body {
@@ -118,6 +119,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 1.8em;
   }
 }
+
 
 
 header.header {
@@ -229,7 +231,7 @@ div.contents.row {
     @include boxBase(20px 0 ,30px);
     position: relative;
     height: 400px;
-    color: #fff;
+    color: white;
     background-size: cover;
     background-position: center center;
     border-radius: 3px;
@@ -264,7 +266,7 @@ div.contents.row {
         width: 80px;
         right: 0;
         font-size: 12px;
-        background-color: #fff;
+        background-color: white;
         border: 1px solid #ddd;
         display: none;
         box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
@@ -279,7 +281,7 @@ div.contents.row {
             padding: 5px;
             &:hover {
               background-color: $accent;
-              color: #fff;
+              color: white;
             }
           }
         }
@@ -347,7 +349,7 @@ form {
     @extend .transition;
     background-color: $accent;
     border-radius: 20px;
-    color: #fff;
+    color: white;
     border: 0;
     font-size: 18px;
     &:hover {
@@ -360,10 +362,47 @@ form {
   box-shadow: 0 0 10px rgba($black,0.2);
   background-color: $white;
   box-sizing: border-box;
+  
 }
 .comments {
+  position: relative;
   padding: 5px;
   margin-top: 15px;
+  h4 {
+    display: inline-block;
+  }
+  .like-btn {
+    padding-bottom: 200px;
+    color: gray;
+    padding-bottom: 300px;
+    
+      
+   }
+
+  .like-btn-unlike {
+    color: red;
+    animation: anime1 3s reverse infinite;
+    
+    
+    @keyframes anime1{
+    0% { transform: scale(１); }
+    60% { transform: scale(１); }
+    70% { transform: scale(1.3); }
+    80% { transform: scale(１); }
+    90% { transform: scale(1.3); }
+    100% { transform: scale(１); }
+    }
+    
+
+    
+  }
+  
+  
+  .posts-show-item .fa {
+    font-size: 16px;
+    margin-right: 3px;
+  }
+
   a {
     color: $accent;
     &:hover {
