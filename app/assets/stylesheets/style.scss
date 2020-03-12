@@ -60,7 +60,7 @@ line-height: 1.57;
 
 a {
   text-decoration: none;
-  color: $dark;
+  color: gold;
   @extend .transition;
   &:hover {
     color: $accent;
@@ -167,6 +167,7 @@ header.header {
       font-size: 1em;
       cursor: pointer;
       position: relative;
+      color: gold;
       &:after {
         content: '▼';
         font-size: .7em;
@@ -186,7 +187,7 @@ header.header {
       border-right: 1px solid #d8d8d8;
       box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
       li {
-        background-color: #f0f0f0;
+        background-color: black;
         a {
           display: block;
           padding: 10px 20px;
@@ -362,7 +363,6 @@ form {
   box-shadow: 0 0 10px rgba($black,0.2);
   background-color: $white;
   box-sizing: border-box;
-  
 }
 .comments {
   position: relative;
@@ -375,8 +375,6 @@ form {
     padding-bottom: 200px;
     color: gray;
     padding-bottom: 300px;
-    
-      
    }
 
   .like-btn-unlike {
